@@ -1,16 +1,7 @@
 <div class="container">
     <h1>Welcome to our Real Estate Portal</h1>
     <div class="properties" *ngIf="properties.length > 0; else noProperties">
-      <div class="property" *ngFor="let property of properties">
-        <h2>{{ property.title }}</h2>
-        <p><strong>Price: </strong>{{ property.price }}</p>
-        <p><strong>Location: </strong>{{ property.location }}</p>
-        <p><strong>Type: </strong>{{ property.propertyType }}</p>
-        <p><strong>Number of Bedrooms: </strong>{{ property.numberOfBedrooms }}</p>
-        <p><strong>Number of Bathrooms: </strong>{{ property.numberOfBathrooms }}</p>
-        <p><strong>Description: </strong>{{ property.description }}</p>
-        <button (click)="viewProperty(property.id)">View Details</button>
-      </div>
+        <app-listing *ngFor="let property of properties" [property]="property"></app-listing>
     </div>
     <ng-template #noProperties>
       <p>No properties found.</p>
