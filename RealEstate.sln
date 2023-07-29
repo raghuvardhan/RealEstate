@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate", "RealEstate\RealEstate.csproj", "{EB04E0EF-9E70-40B9-8647-19EC0A732866}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement", "UserManagement\UserManagement.csproj", "{0DF7A80A-CB2D-4C8A-B752-7A202E626591}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB04E0EF-9E70-40B9-8647-19EC0A732866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB04E0EF-9E70-40B9-8647-19EC0A732866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB04E0EF-9E70-40B9-8647-19EC0A732866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB04E0EF-9E70-40B9-8647-19EC0A732866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DF7A80A-CB2D-4C8A-B752-7A202E626591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF7A80A-CB2D-4C8A-B752-7A202E626591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF7A80A-CB2D-4C8A-B752-7A202E626591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF7A80A-CB2D-4C8A-B752-7A202E626591}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2B4FE9C-39D8-4B44-B743-88D36811131F}
+	EndGlobalSection
+EndGlobal
