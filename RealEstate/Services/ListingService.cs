@@ -11,6 +11,7 @@ namespace RealEstate.Services
         Task<Listing> UpdateListing(Listing listing);
         Task<Listing> GetListing(int listingId);
         Task DeleteListing(int listingId);
+        Task<List<Listing>> GetListings();
     }
 
     public class ListingService : IListingService
@@ -51,6 +52,11 @@ namespace RealEstate.Services
         public async Task<Listing> GetListing(int listingId)
         {
             return await _context.Listings.FindAsync(listingId);
+        }
+
+        public async Task<List<Listing>> GetListings()
+        {
+            return await _context.Listings.ToListAsync();
         }
 
         public async Task DeleteListing(int listingId)

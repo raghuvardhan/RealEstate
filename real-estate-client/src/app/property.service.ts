@@ -7,7 +7,7 @@ import { Property } from './models/property';
   providedIn: 'root'
 })
 export class PropertyService {
-  private apiUrl = 'http://localhost:5000/api';  // URL to your backend API
+  private apiUrl = 'https://localhost:7166/api'  // URL to your backend API
 
   constructor(private http: HttpClient) { }
 

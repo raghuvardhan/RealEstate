@@ -23,6 +23,12 @@ namespace RealEstate.Controllers
             return await _listingService.AddListing(listing);
         }
 
+        [HttpGet]
+        public async Task<ActionResult<List<Listing>>> GetListings()
+        {
+            return await _listingService.GetListings();
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Listing>> GetListing(int id)
         {
