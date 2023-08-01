@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using RealEstate.Models;
 using RealEstate.Services;
 
 namespace RealEstate.Controllers

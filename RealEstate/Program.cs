@@ -1,5 +1,12 @@
-﻿using RealEstate.Services;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using System;
+using System.Diagnostics;
+using RealEstate.Services;
 using UserManagement;
+using UserManagement.Models;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 
 namespace RealEstate;
 
@@ -9,13 +16,19 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+
+        // Add services to the container.
+        builder.Services.AddDbContext<MyDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
         // Add services to the container.
         builder.Services.AddControllers();
+        builder.Services.AddScoped<IGeocodingService, GeocodingService>();
         builder.Services.AddScoped<IUserService, UserService>();
         builder.Services.AddScoped<IListingService, ListingService>();
         builder.Services.AddScoped<IImageService, ImageService>();
         builder.Services.AddScoped<ISearchFilterService, SearchFilterService>();
-        builder.Services.AddScoped<IGeocodingService, GeocodingService>();
 
         // Build the application.
         var app = builder.Build();
@@ -26,18 +39,12 @@ public class Program
             app.UseExceptionHandler("/Error");
             app.UseHsts();
         }
-
         app.UseHttpsRedirection();
         app.UseStaticFiles();
-
         app.UseRouting();
-
         app.UseAuthorization();
-
         app.MapControllers();
-
         app.Run();
-
     }
 }
 

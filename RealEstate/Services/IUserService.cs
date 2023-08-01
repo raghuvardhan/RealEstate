@@ -1,7 +1,7 @@
 ﻿using System;
 using UserManagement.Models;
 
-namespace UserManagement
+namespace RealEstate
 {
     public interface IUserService
     {

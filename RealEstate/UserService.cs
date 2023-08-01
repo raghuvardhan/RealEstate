@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
+using RealEstate;
 using UserManagement.Models;
 
 namespace UserManagement

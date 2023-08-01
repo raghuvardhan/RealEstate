@@ -1,5 +1,7 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 using RealEstate.Models;
+using UserManagement;
 
 namespace RealEstate.Services
 {
@@ -16,7 +18,7 @@ namespace RealEstate.Services
         private readonly MyDbContext _context;
         private readonly IGeocodingService _geocodingService;
 
-        public ListingService(MyDbContext context, GeocodingService geocodingService)
+        public ListingService(MyDbContext context, IGeocodingService geocodingService)
         {
             _context = context;
             _geocodingService = geocodingService;

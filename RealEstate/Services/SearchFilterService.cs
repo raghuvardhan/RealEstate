@@ -1,5 +1,7 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 using RealEstate.Models;
+using UserManagement;
 
 namespace RealEstate.Services
 {

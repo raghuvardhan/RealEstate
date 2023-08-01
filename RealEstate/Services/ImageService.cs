@@ -1,5 +1,6 @@
 ﻿using System;
 using RealEstate.Models;
+using UserManagement;
 
 namespace RealEstate.Services
 {
@@ -22,7 +23,7 @@ namespace RealEstate.Services
         public async Task<Image> UploadImage(IFormFile file, int listingId)
         {
             // Upload the image file to Azure Blob Storage (or another service) and get the image URL
-            string imageUrl = await UploadToBlobStorage(file);
+            string imageUrl = UploadToBlobStorage(file);
 
             // Create a new Image record
             Image image = new Image
@@ -53,19 +54,21 @@ namespace RealEstate.Services
             }
 
             // Delete the image file from Azure Blob Storage (or another service)
-            await DeleteFromBlobStorage(image.ImageURL);
+            DeleteFromBlobStorage(image.ImageURL);
 
             // Delete the Image record from the database
             _context.Images.Remove(image);
             await _context.SaveChangesAsync();
         }
 
-        private async Task<string> UploadToBlobStorage(IFormFile file)
+        private string UploadToBlobStorage(IFormFile file)
         {
+            return "";
+      
             // Implement this method to upload the file to Azure Blob Storage and return the image URL
         }
 
-        private async Task DeleteFromBlobStorage(string imageUrl)
+        private void DeleteFromBlobStorage(string imageUrl)
         {
             // Implement this method to delete the image file from Azure Blob Storage
         }
