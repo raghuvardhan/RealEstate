@@ -8,7 +8,7 @@ import { User } from '../models/user';
   styleUrls: ['./login-registration.component.css']
 })
 export class LoginRegistrationComponent implements OnInit {
-  user: User = {id: 0, username: '', email: '', firstName: '', lastName: ''};
+  user: User = {id: 0, username: '', email: '', firstName: '', lastName: '', password: ''};
 
   constructor(private userService: UserService) { }
 

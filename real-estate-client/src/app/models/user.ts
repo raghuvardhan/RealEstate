@@ -4,6 +4,7 @@ export interface User {
     email: string;
     firstName: string;
     lastName: string;
+    password: string;
     // Add other properties as needed (e.g., password, avatar, etc.)
   }
   

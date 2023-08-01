@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Property } from '../property';
+import { Property } from '../models/property';
 
 @Component({
   selector: 'app-listing',
@@ -7,7 +7,8 @@ import { Property } from '../property';
   styleUrls: ['./listing.component.css']
 })
 export class ListingComponent implements OnInit {
-  @Input() property: Property;
+  @Input()
+  property!: Property;
 
   constructor() { }
 
