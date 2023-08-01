@@ -1,0 +1,20 @@
+.property-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .property-detail h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  .property-detail p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  

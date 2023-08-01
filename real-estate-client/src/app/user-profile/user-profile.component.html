@@ -1,0 +1,14 @@
+<div class="user-profile" *ngIf="user">
+    <h1>{{ user.username }}</h1>
+    <p><strong>Email: </strong>{{ user.email }}</p>
+    <!-- Display other user details -->
+  </div>
+  
+  <div class="user-listings" *ngIf="listings.length > 0; else noListings">
+    <app-listing *ngFor="let listing of listings" [property]="listing"></app-listing>
+  </div>
+  
+  <ng-template #noListings>
+    <p>No listings found.</p>
+  </ng-template>
+  

@@ -1,0 +1,11 @@
+<div class="listing-form">
+    <input [(ngModel)]="listing.title" placeholder="Title">
+    <input [(ngModel)]="listing.price" placeholder="Price" type="number">
+    <input [(ngModel)]="listing.location" placeholder="Location">
+    <input [(ngModel)]="listing.propertyType" placeholder="Property Type">
+    <input [(ngModel)]="listing.numberOfBedrooms" placeholder="Number of Bedrooms" type="number">
+    <input [(ngModel)]="listing.numberOfBathrooms" placeholder="Number of Bathrooms" type="number">
+    <textarea [(ngModel)]="listing.description" placeholder="Description"></textarea>
+    <button (click)="onSubmit()">Submit</button>
+  </div>
+  

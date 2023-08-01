@@ -27,8 +27,8 @@ export class PropertyService {
   }
 
   // Update an existing property
-  updateProperty(id: number, property: Property): Observable<Property> {
-    return this.http.put<Property>(`${this.apiUrl}/listing/${id}`, property);
+  updateProperty(property: Property): Observable<Property> {
+    return this.http.put<Property>(`${this.apiUrl}/listing/${property.id}`, property);
   }
 
   // Delete a property

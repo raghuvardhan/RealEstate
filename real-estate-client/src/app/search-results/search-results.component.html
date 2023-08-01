@@ -1,0 +1,13 @@
+<div class="search-bar">
+    <input [value]="searchQuery" (change)="searchQueryChange.emit()" placeholder="Search for properties">
+    <button (click)="onSearch()">Search</button>
+  </div>
+  
+  <div class="search-results" *ngIf="properties.length > 0; else noResults">
+    <app-listing *ngFor="let property of properties" [property]="property"></app-listing>
+  </div>
+  
+  <ng-template #noResults>
+    <p>No results found.</p>
+  </ng-template>
+  
