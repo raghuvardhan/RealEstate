@@ -10,6 +10,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoginRegistrationComponent } from './login-registration/login-registration.component';
 import { AddEditListingComponent } from './add-edit-listing/add-edit-listing.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AddEditListingComponent } from './add-edit-listing/add-edit-listing.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
