@@ -38,7 +38,7 @@ namespace RealEstate.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<Listing>> UpdateListing(int id, Listing listing)
         {
-            if (id != listing.ListingID)
+            if (id != listing.Id)
             {
                 return BadRequest();
             }

@@ -8,7 +8,7 @@ namespace RealEstate.Models
     public class Listing
     {
         [Key]
-        public int ListingID { get; set; }
+        public int Id { get; set; }
 
         [ForeignKey("User")]
         public int UserID { get; set; }

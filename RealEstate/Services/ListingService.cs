@@ -63,7 +63,7 @@ namespace RealEstate.Services
             {
                 new Listing()
                 {
-                    ListingID = 1,
+                    Id = 1,
 
                     UserID = 1,
 
@@ -91,7 +91,7 @@ namespace RealEstate.Services
                 },
                  new Listing()
                 {
-                    ListingID = 2,
+                    Id = 2,
 
                     UserID = 2,
 
@@ -119,7 +119,7 @@ namespace RealEstate.Services
                 },
                   new Listing()
                 {
-                    ListingID = 3,
+                    Id = 3,
 
                     UserID = 3,
 
@@ -147,7 +147,7 @@ namespace RealEstate.Services
                 },
                    new Listing()
                 {
-                    ListingID = 4,
+                    Id = 4,
 
                     UserID = 4,
 
@@ -175,7 +175,7 @@ namespace RealEstate.Services
                 },
                     new Listing()
                 {
-                    ListingID = 5,
+                    Id = 5,
 
                     UserID = 5,
 
@@ -203,7 +203,7 @@ namespace RealEstate.Services
                 },
                      new Listing()
                 {
-                    ListingID = 6,
+                    Id = 6,
 
                     UserID = 6,
 
