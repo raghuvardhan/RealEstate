@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { User } from './models/user';
+import { User } from '../../models/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:5000/api';  // URL to your backend API
+  private apiUrl = 'http://localhost:7166/api';  // URL to your backend API
 
   constructor(private http: HttpClient) { }
 

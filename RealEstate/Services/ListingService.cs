@@ -1,7 +1,10 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using RealEstate.Models;
 using UserManagement;
+using UserManagement.Models;
 
 namespace RealEstate.Services
 {
@@ -56,7 +59,180 @@ namespace RealEstate.Services
 
         public async Task<List<Listing>> GetListings()
         {
-            return await _context.Listings.ToListAsync();
+            List<Listing> listings = new List<Listing>
+            {
+                new Listing()
+                {
+                    ListingID = 1,
+
+                    UserID = 1,
+
+                    User = new User(),
+
+                    Title = "purab manor",
+
+                    Description = "resale",
+
+                    Price = 8000000,
+
+                    Location = "bangalore",
+
+                    NumberOfBedrooms = 3,
+
+                    NumberOfBathrooms = 3,
+
+                    PropertyType = "new",
+
+                    ListedAt = new DateTime(),
+
+                    Lat = 99.0,
+
+                    Lng = 99.0
+                },
+                 new Listing()
+                {
+                    ListingID = 2,
+
+                    UserID = 2,
+
+                    User = new User(),
+
+                    Title = "Sky Villas",
+
+                    Description = "resale",
+
+                    Price = 8000000,
+
+                    Location = "bangalore",
+
+                    NumberOfBedrooms = 3,
+
+                    NumberOfBathrooms = 3,
+
+                    PropertyType = "new",
+
+                    ListedAt = new DateTime(),
+
+                    Lat = 99.0,
+
+                    Lng = 99.0
+                },
+                  new Listing()
+                {
+                    ListingID = 3,
+
+                    UserID = 3,
+
+                    User = new User(),
+
+                    Title = "Nature Villas",
+
+                    Description = "resale",
+
+                    Price = 8000000,
+
+                    Location = "Mumbai",
+
+                    NumberOfBedrooms = 3,
+
+                    NumberOfBathrooms = 3,
+
+                    PropertyType = "new",
+
+                    ListedAt = new DateTime(),
+
+                    Lat = 99.0,
+
+                    Lng = 99.0
+                },
+                   new Listing()
+                {
+                    ListingID = 4,
+
+                    UserID = 4,
+
+                    User = new User(),
+
+                    Title = "Water Villas",
+
+                    Description = "resale",
+
+                    Price = 8000000,
+
+                    Location = "bangalore",
+
+                    NumberOfBedrooms = 3,
+
+                    NumberOfBathrooms = 3,
+
+                    PropertyType = "new",
+
+                    ListedAt = new DateTime(),
+
+                    Lat = 99.0,
+
+                    Lng = 99.0
+                },
+                    new Listing()
+                {
+                    ListingID = 5,
+
+                    UserID = 5,
+
+                    User = new User(),
+
+                    Title = "Forest View Villa",
+
+                    Description = "resale",
+
+                    Price = 8000000,
+
+                    Location = "Hyderabad",
+
+                    NumberOfBedrooms = 3,
+
+                    NumberOfBathrooms = 3,
+
+                    PropertyType = "new",
+
+                    ListedAt = new DateTime(),
+
+                    Lat = 99.0,
+
+                    Lng = 99.0
+                },
+                     new Listing()
+                {
+                    ListingID = 6,
+
+                    UserID = 6,
+
+                    User = new User(),
+
+                    Title = "purab high manor",
+
+                    Description = "resale",
+
+                    Price = 8000000,
+
+                    Location = "Kerala",
+
+                    NumberOfBedrooms = 3,
+
+                    NumberOfBathrooms = 3,
+
+                    PropertyType = "new",
+
+                    ListedAt = new DateTime(),
+
+                    Lat = 99.0,
+
+                    Lng = 99.0
+                },
+
+            };
+            return await Task.FromResult(listings);
+            //return await _context.Listings.ToListAsync();
         }
 
         public async Task DeleteListing(int listingId)

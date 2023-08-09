@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
-import { SearchFilterService } from '../search-filter.service';
-import { Property } from '../models/property';
+import { SearchFilterService } from '../../services/search/search-filter.service';
+import { Property } from '../../models/property';
 
 @Component({
   selector: 'app-search-results',

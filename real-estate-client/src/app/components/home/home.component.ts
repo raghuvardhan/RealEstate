@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PropertyService } from '../property.service';
+import { PropertyService } from '../../services/property/property.service';
 import { Router } from '@angular/router';
-import { Property } from '../models/property';
+import { Property } from '../../models/property';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.propertyService.getProperties().subscribe(properties => {
+      console.log(properties);
       this.properties = properties;
     });
   }

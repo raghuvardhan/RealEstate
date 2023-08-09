@@ -29,6 +29,17 @@ public class Program
         builder.Services.AddScoped<IListingService, ListingService>();
         builder.Services.AddScoped<IImageService, ImageService>();
         builder.Services.AddScoped<ISearchFilterService, SearchFilterService>();
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowSpecificOrigin",
+                builder =>
+                {
+                    builder.WithOrigins("http://localhost:4200") // replace with your frontend domain/port
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
+                });
+        });
+
 
         // Build the application.
         var app = builder.Build();
@@ -39,6 +50,11 @@ public class Program
             app.UseExceptionHandler("/Error");
             app.UseHsts();
         }
+        else
+        {
+            app.UseDeveloperExceptionPage();
+        }
+        app.UseCors("AllowSpecificOrigin");
         app.UseHttpsRedirection();
         app.UseStaticFiles();
         app.UseRouting();

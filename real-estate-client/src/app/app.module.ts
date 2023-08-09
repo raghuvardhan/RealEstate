@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ListingComponent } from './listing/listing.component';
-import { PropertyDetailComponent } from './property-detail/property-detail.component';
-import { SearchResultsComponent } from './search-results/search-results.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { LoginRegistrationComponent } from './login-registration/login-registration.component';
-import { AddEditListingComponent } from './add-edit-listing/add-edit-listing.component';
+import { HomeComponent } from './components/home/home.component';
+import { ListingComponent } from './components/listing/listing.component';
+import { PropertyDetailComponent } from './components/property-detail/property-detail.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { LoginRegistrationComponent } from './components/login-registration/login-registration.component';
+import { AddEditListingComponent } from './components/add-edit-listing/add-edit-listing.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

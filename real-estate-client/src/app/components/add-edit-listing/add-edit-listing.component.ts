@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PropertyService } from '../property.service';
-import { Property } from '../models/property';
+import { PropertyService } from '../../services/property/property.service';
+import { Property } from '../../models/property';
 
 @Component({
   selector: 'app-add-edit-listing',

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { PropertyDetailComponent } from './property-detail/property-detail.component';
-import { SearchResultsComponent } from './search-results/search-results.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { LoginRegistrationComponent } from './login-registration/login-registration.component';
-import { AddEditListingComponent } from './add-edit-listing/add-edit-listing.component';
+import { PropertyDetailComponent } from './components/property-detail/property-detail.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { LoginRegistrationComponent } from './components/login-registration/login-registration.component';
+import { AddEditListingComponent } from './components/add-edit-listing/add-edit-listing.component';
 
 const routes: Routes = [
   { path: 'property/:id', component: PropertyDetailComponent },
